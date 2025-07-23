@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Simple Login System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard-box">
+            <div class="header">
+                <h1>Welcome to Dashboard</h1>
+                <button id="logoutBtn" class="logout-btn">Logout</button>
+            </div>
+            
+            <div class="welcome-message">
+                <h2 id="welcomeText">Hello, User!</h2>
+                <p>You have successfully logged in to the system.</p>
+            </div>
+            
+            <div class="dashboard-content">
+                <h3>Dashboard Features:</h3>
+                <ul>
+                    <li>✓ Secure login system</li>
+                    <li>✓ Session management</li>
+                    <li>✓ Simple and clean interface</li>
+                    <li>✓ Offline functionality</li>
+                </ul>
+                
+                <div class="user-info">
+                    <h3>Session Information:</h3>
+                    <p>Login time: <span id="loginTime"></span></p>
+                    <p>Status: <span class="status-active">Active</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // check if user is logged in
+        const currentUser = localStorage.getItem('currentUser');
+        const loginTime = localStorage.getItem('loginTime');
+        
+        if (!currentUser) {
+            // redirect to login page if not logged in
+            window.location.href = 'index.html';
+        } else {
+            // display welcome message with username
+            document.getElementById('welcomeText').textContent = `Hello, ${currentUser}!`;
+            
+            // display login time
+            if (loginTime) {
+                document.getElementById('loginTime').textContent = new Date(loginTime).toLocaleString();
+            }
+        }
+        
+        // logout functionality
+        document.getElementById('logoutBtn').addEventListener('click', function() {
+            // clear session data
+            localStorage.removeItem('currentUser');
+            localStorage.removeItem('loginTime');
+            
+            // redirect to login page
+            alert('You have been logged out successfully!');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
