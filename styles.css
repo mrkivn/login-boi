@@ -1,4 +1,4 @@
-/* Basic reset and general styles */
+/* basic reset and general styles */
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +20,7 @@ body {
     padding: 20px;
 }
 
-/* Login box styles */
+/* login box styles */
 .login-box {
     background-color: white;
     padding: 30px;
@@ -36,7 +36,7 @@ body {
     color: #333;
 }
 
-/* Form styles */
+/* form styles */
 .form-group {
     margin-bottom: 15px;
 }
@@ -76,7 +76,7 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* Message styles */
+/* message styles */
 .message {
     margin-top: 15px;
     padding: 10px;
@@ -99,7 +99,7 @@ button:hover {
     display: block;
 }
 
-/* Demo info styles */
+/* demo info styles */
 .demo-info {
     margin-top: 20px;
     padding: 15px;
@@ -118,7 +118,7 @@ button:hover {
     font-size: 14px;
 }
 
-/* Dashboard styles */
+/* dashboard styles */
 .dashboard-box {
     background-color: white;
     padding: 30px;
@@ -195,7 +195,7 @@ button:hover {
     font-weight: bold;
 }
 
-/* Responsive design */
+/* responsive design */
 @media (max-width: 480px) {
     .container {
         padding: 10px;
